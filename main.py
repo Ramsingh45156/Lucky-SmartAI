@@ -188,11 +188,11 @@ def cmd():
             Nameofweb = text.replace("visit ", "").strip() 
             speak(f"Visiting {Nameofweb}")
             
-            # Forming the URL
+        
             Link = f"https://www.{Nameofweb}.com"
             webbrowser.open(Link)
 
-        # Launch Website
+        
         elif "launch" in text or "Lunch" in text:
             Nameofweb = text.replace("launch ", "").strip()  # Removed extra space
             speak(f"Launching {Nameofweb}")
@@ -202,15 +202,15 @@ def cmd():
         elif "scroll up" in text or "Do it" in text or "And up" in text or "do it" in text:
             gui.scroll(500)  # Positive value scrolls up
 
-        # Scroll Down
+        
         elif "scroll down" in text or "Do down" in text or "And down" in text:
             gui.scroll(-500)  # Negative value scrolls down
 
-        # Play, Pause, Stop (using Spacebar)
+        
         elif "play" in text or "pause" in text or "stop" in text:
             gui.press("space")
 
-        # Search Functionality
+        
         elif text.startswith("search"):
             gui.hotkey("/")  # Open search bar if applicable
             text = text.replace("search", "").strip()
@@ -227,62 +227,62 @@ def cmd():
             speak("Maximizing Window.")
             gui.hotkey("win", "up")
 
-        # 10. Restore Window
+        
         elif "restore window" in text:
             speak("Restoring Window.")
             gui.hotkey("win", "shift", "up")
 
-        # 11. Switch Window (Next)
+        
         elif "switch window" in text or "next window" in text or "Witch next window" in text or "Witch window" in text or "Next window" in text:
             speak("Switching to Next Window.")
             gui.hotkey("alt", "tab")
 
-        # 12. Switch to Previous Window
+        
         elif "previous window" in text or "back window" in text or "back window" in text or "TVS window" in text:
             speak("Switching to Previous Window.")
             gui.hotkey("alt", "shift", "tab")
 
-        # 13. Open Incognito / Private Window
+        
         elif "private window" in text:
             speak("Opening Incognito Window.")
             gui.hotkey("ctrl", "shift", "n")
 
-        # 14. Bookmark Page
+        
         elif "bookmark page" in text or "save page" in text:
             speak("Bookmarking Page.")
             gui.hotkey("ctrl", "d")
 
-        # 15. Open Browsing History
+        
         elif "history" in text or "browse history" in text or "view history" in text:
             speak("Opening Browsing History.")
             gui.hotkey("ctrl", "h")
 
-        # 16. Open Downloads
+        
         elif "download" in text or "download history" in text or "Download history" in text:
             speak("Opening Downloads History.")
             gui.hotkey("ctrl", "j")
 
-        # 17. Open Developer Tools (Inspect Element)
+        
         elif "inspect element" in text or "open developer tools" in text:
             speak("Opening Developer Tools.")
             gui.hotkey("ctrl", "shift", "i")
 
-        # 18. Clear Cookies / Browsing Data
+        
         elif "clear cookies" in text or "delete cookies" in text or "clear browsing data" in text or "clear history" in text:
             speak("Clearing Browsing Data.")
             gui.hotkey("ctrl", "shift", "del")
 
-        # 19. Enter Fullscreen
+        
         elif "fullscreen" in text or "full screen" in text:
             speak("Entering Fullscreen Mode.")
             gui.hotkey("f11")
 
-        # 20. Toggle Dark Mode
+        
         elif "toggle dark mode" in text or "dark theme" in text or "Dark modes" in text or "Dark Mod" in text:
             speak("Toggling Dark Mode.")
             gui.hotkey("ctrl", "shift", "e")
 
-        # 21. Mute / Unmute Tab
+        
         elif "mute tab" in text:
             speak("Muting Tab.")
             gui.hotkey("ctrl", "m")
@@ -291,27 +291,27 @@ def cmd():
             speak("Unmuting Tab.")
             gui.hotkey("ctrl", "shift", "m")
 
-        # 22. Open Extensions
+        
         elif "manage extension" in text or "Manage Extension" in text:
             speak("Opening Extensions.")
             gui.hotkey("ctrl", "shift", "a")
 
-        # 23. Open Browser Settings
+        
         elif "browser setting" in text or "Browser setting" in text:
             speak("Opening Settings.")
             gui.hotkey("ctrl", ",")
 
-        # 24. Save Page As
+        
         elif "save as page" in text or "save as" in text or "Save save" in text:
             speak("Saving Page As.")
             gui.hotkey("ctrl", "s")
 
-        # 25. Print Page
+        
         elif "print page" in text or "print" in text:
             speak("Printing Page.")
             gui.hotkey("ctrl", "p")
 
-        # 26. Open Bookmarks
+        
         elif "view bookmark" in text:
             speak("Opening Bookmarks.")
             gui.hotkey("ctrl", "b")                    
@@ -320,47 +320,47 @@ def cmd():
             speak("Going Back.")
             gui.hotkey("alt", "left")
 
-        # 43. Go Forward
+        
         elif "go forward" in text or "forward" in text:
             speak("Going Forward.")
             gui.hotkey("alt", "right")
 
-        # 44. Stop Page Load
+        
         elif "stop loading" in text or "stop" in text:
             speak("Stopping Page Load.")
             gui.press("esc")
 
-        # 45. Scroll Up
+        
         elif "scroll up" in text or "scroll page up" in text:
             speak("Scrolling Up.")
             gui.scroll(3)
 
-        # 46. Scroll Down
+        
         elif "scroll down" in text or "scroll page down" in text:
             speak("Scrolling Down.")
             gui.scroll(-3)
 
-        # 47. Scroll to Top
+        
         elif "scroll to top" in text:
             speak("Scrolling to Top.")
             gui.press("home")
 
-        # 48. Scroll to Bottom
+        
         elif "scroll to bottom" in text:
             speak("Scrolling to Bottom.")
             gui.press("end")
 
-        # 49. Open New Tab
+        
         elif "then" in text or "new tab" in text or "New then" in text:
             speak("Opening New Tab.")
             gui.hotkey("ctrl", "t")
 
-        # 50. Reopen Closed Tab
+        
         elif "reopen closed then" in text or "restore closed tab" in text:
             speak("Reopening Closed Tab.")
             gui.hotkey("ctrl", "shift", "t")
 
-        # 51. Switch to a Specific Tab (Dynamic Tab Switching)
+        
         elif "switch to tab" in text or "go to tab" in text:
             tab_number = ''.join(filter(str.isdigit, text))  # Extract number from text
             if tab_number:
@@ -372,37 +372,37 @@ def cmd():
             speak("Showing Desktop.")
             gui.hotkey("win", "m")
 
-        # 60. Open Task View
+        
         elif "open task view" in text or "view tasks" in text:
             speak("Opening Task View.")
             gui.hotkey("win", "tab")    
         
-        # 61. Switch Virtual Desktop
+        
         elif "switch virtual desktop" in text or "change desktop" in text or " Witch virtual desktop" in text:
             speak("Switching Virtual Desktop.")
             gui.hotkey("ctrl", "win", "right")
 
-        # 62. Open Notification Center
+        
         elif "open notification center" in text or "show notifications" in text:
             speak("Opening Notification Center.")
             gui.hotkey("win", "a")
 
-        # 63. Show Action Center
+        
         elif "show action center" in text or "show action menu" in text:
             speak("Showing Action Center.")
             gui.hotkey("win", "a")
 
-        # 64. Lock Screen / Switch User
+        
         elif "lock screen" in text or "lock computer" in text or "switch user" in text or "change user" in text:
             speak("Locking Screen.")
             gui.hotkey("win", "l")
 
-        # 66. Log Off / Sign Out
+        
         elif "log off" in text or "sign out" in text:
             speak("Logging Off.")
             gui.hotkey("ctrl", "alt", "del")
 
-        # 67. Shutdown Computer
+        
         elif "shutdown" in text or "turn off computer" in text or "shut down" in text or "Shutdown computer" in text:
             speak("Shutting Down.")
             gui.hotkey("win", "d")
